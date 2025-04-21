@@ -18,7 +18,7 @@ For users who have root privileges and want a system-wide installation or update
 ### **updatetorsudo.sh**
 
 #### **Description**:
-`updatetorsudo.sh` updates tor when it says OBSOLETE , caters to environments where the user lacks root privileges. It operates entirely within the user space, leveraging local directories for GPG keys, repository configurations, and package management. The script avoids modifying system-wide configurations, making it an ideal solution for shared systems.
+`updatetorsudo.sh` (updates tor when it says OBSOLETE), caters to environments where the user lacks root privileges. It operates entirely within the user space, leveraging local directories for GPG keys, repository configurations, and package management. The script avoids modifying system-wide configurations, making it an ideal solution for shared systems.
 
 #### **How It Works**:
 - Stores the Tor Project's GPG key in a directory within the user's home directory.

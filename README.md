@@ -1,6 +1,3 @@
-Got it! Here's the updated description, incorporating the correct file names:
-
----
 
 ### **updatetorroot.sh**
 

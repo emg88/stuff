@@ -44,4 +44,3 @@ For users operating in environments where they lack administrative privileges or
 
 ---
 
-Let me know if you'd like any more refinements to these descriptions!

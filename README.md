@@ -1,4 +1,4 @@
-both scripts update tor when the installed package says obsolete. will fix so you're able to get newer version of tor to run a relay or exit.
+both scripts update tor when the installed package says obsolete. will fix so you're able to get newer version of tor to run a relay or exit (debian based linux)
 
 
 ### **updatetorroot.sh**

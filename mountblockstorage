@@ -1,0 +1,30 @@
+
+How to partition, format, and mount your block storage
+
+Setting up your block storage is quick and easy. Here are the steps to follow in Linux such as Debian/Ubuntu
+
+    SSH into your server and use the command lsblk to check the name of the added block storage. It will typically be listed as /dev/vdb.
+
+    Install parted if not already installed, using apt install parted
+
+    Execute the following sequence of CLI commands
+
+    parted /dev/vdb
+    mklabel gpt
+    mkpart primary 0% 100%
+    quit
+    mkfs.ext4 /dev/vdb1 <- This takes a while depending on the size of your storage. Be patient.
+
+    Create a folder where you want the new partition mounted using the command mkdir /mnt/hdd (can name it what you want).
+
+    Use the command mount /dev/vdb1 /mnt/hdd to mount the new partition.
+
+    run the following CLI command to automatically mount the partition at boot echo "/dev/vdb1 /mnt/hdd ext4 defaults 0 0" >> /etc/fstab
+    Verify the new partition is properly mounted by using the command df -h. This should show /dev/vdb1 and it's size mounted to /hdd
+
+That's it! Enjoy your new persistent large storage space.
+
+
+echo "/dev/vdb1 /home/master/torrents/qbittorrent ext4 defaults 0 0" >> /etc/fstab
+
+mount /dev/vdb1 /home/master/torrents/qbittorrent
